@@ -7,3 +7,9 @@ Dotfiles for WM and VS Code jsons
 ### Extensions
 
 ## Install themes
+
+## Install fonts
+Hack
+Hack Nerd
+Noto-fonts
+Droid Nerd Sans Mono
