@@ -16,10 +16,12 @@ All files can be dumped in ~/.config. Wallpapers path will need to be updated ba
 - lxappearance
 - lightdm
 - network manager
+- network-manager-applet
 - nvim
 - papirus icons
 - pavucontrol
 - pulseaudio
+- volumeicon
 - pywal
 - rofi
 - rofi-emoji
