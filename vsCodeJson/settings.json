@@ -1,56 +1,64 @@
 {
-  //THEME
-  "workbench.colorTheme": "One Dark Pro Flat",
-  "workbench.iconTheme": "material-icon-theme",
-  "editor.fontFamily": "'Hack'",
-  "editor.fontSize": 15,
-  "editor.lineNumbers": "relative",
-  "window.menuBarVisibility": "toggle",
+	//THEME
+	"workbench.colorTheme": "One Dark Pro Flat",
+	"workbench.iconTheme": "material-icon-theme",
+	"editor.fontFamily": "'Hack'",
+	"editor.fontSize": 15,
+	"editor.lineNumbers": "relative",
+	"window.menuBarVisibility": "toggle",
 
-  //SECURITY
-  "security.workspace.trust.untrustedFiles": "open",
-  "explorer.confirmDelete": false,
+	//SECURITY
+	"security.workspace.trust.untrustedFiles": "open",
+	"explorer.confirmDelete": false,
 
-  //MISC EXTENSIONS
-  "liveServer.settings.donotShowInfoMsg": true,
+	//VIIIIIIIIIIIIIIIIM
+	"vim.leader": "<Space>",
+	"vim.hlsearch": true,
+	"vim.normalModeKeyBindingsNonRecursive": [
+		// switch b/w buffers
+		{ "before": ["leader", "h"], "commands": [":bprevious"] },
+		{ "before": ["leader", "l"], "commands": [":bnext"] },
 
-  //VIIIIIIIIIIIIIIIIM
-  "vim.leader": "<Space>",
-  "vim.hlsearch": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    //Navigation
-    //splits
-    { "before": ["leader", "v"], "commands": [":vsplit"] },
+		//Navigation
+		//splits
+		{ "before": ["leader", "v"], "commands": [":vsplit"] },
 
-    //panes
-    {
-      "before": ["leader", "h"],
-      "commands": ["workbench.action.focusLeftGroup"]
-    },
+		//panes
+		{
+			"before": ["leader", "H"],
+			"commands": ["workbench.action.focusLeftGroup"]
+		},
 
-    {
-      "before": ["leader", "l"],
-      "commands": ["workbench.action.focusRightGroup"]
-    },
+		{
+			"before": ["leader", "L"],
+			"commands": ["workbench.action.focusRightGroup"]
+		},
 
-    //pageDown pageUp
-    {
-      "before": ["<C-d>"],
-      "after": ["<C-d>", "z", "z"]
-    },
+		//pageDown pageUp
+		{
+			"before": ["<C-d>"],
+			"after": ["<C-d>", "z", "z"]
+		},
 
-    {
-      "before": ["<C-u>"],
-      "after": ["<C-u>", "z", "z"]
-    },
-  ],
+		{
+			"before": ["<C-u>"],
+			"after": ["<C-u>", "z", "z"]
+		}
+	],
 
-  //CODE FORMATING
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.minimap.enabled": false
+	//CODE FORMATING
+	"editor.formatOnSave": true,
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.minimap.enabled": false,
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"accessibility.dimUnfocused.opacity": 1
 }
