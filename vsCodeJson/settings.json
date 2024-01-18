@@ -2,7 +2,8 @@
 	//THEME
 	"workbench.colorTheme": "One Dark Pro Flat",
 	"workbench.iconTheme": "material-icon-theme",
-	"editor.fontFamily": "'Hack'",
+	"terminal.integrated.fontFamily": "'Hack Nerd Font Mono'",
+	"editor.fontFamily": "'Hack Nerd Font'",
 	"editor.fontSize": 15,
 	"editor.lineNumbers": "relative",
 	"window.menuBarVisibility": "toggle",
@@ -60,5 +61,5 @@
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"accessibility.dimUnfocused.opacity": 1
+	"accessibility.dimUnfocused.opacity": 1,
 }
