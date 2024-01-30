@@ -26,12 +26,12 @@
 
 		//panes
 		{
-			"before": ["leader", "H"],
+			"before": ["leader", "h"],
 			"commands": ["workbench.action.focusLeftGroup"]
 		},
 
 		{
-			"before": ["leader", "L"],
+			"before": ["leader", "l"],
 			"commands": ["workbench.action.focusRightGroup"]
 		},
 		//pageDown pageUp
