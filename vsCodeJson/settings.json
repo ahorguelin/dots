@@ -17,8 +17,8 @@
 	"vim.hlsearch": true,
 	"vim.normalModeKeyBindingsNonRecursive": [
 		// switch b/w buffers
-		{ "before": ["leader", "h"], "commands": [":bprevious"] },
-		{ "before": ["leader", "l"], "commands": [":bnext"] },
+		{ "before": ["leader", "["], "commands": [":bprevious"] },
+		{ "before": ["leader", "]"], "commands": [":bnext"] },
 
 		//Navigation
 		//splits
@@ -34,7 +34,6 @@
 			"before": ["leader", "L"],
 			"commands": ["workbench.action.focusRightGroup"]
 		},
-
 		//pageDown pageUp
 		{
 			"before": ["<C-d>"],
@@ -44,6 +43,12 @@
 		{
 			"before": ["<C-u>"],
 			"after": ["<C-u>", "z", "z"]
+		},
+
+		//get definition
+		{
+			"before": ["leader", "d"],
+			"commands": ["editor.action.showDefinitionPreviewHover"]
 		}
 	],
 
