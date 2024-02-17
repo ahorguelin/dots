@@ -3,6 +3,9 @@ Dotfiles for WM and VS Code jsons. The goal is to start from a fresh linux insta
 
 All files can be dumped in ~/.config. Wallpapers path will need to be updated based on preference in ~/.config/i3/config. The bin directory should be placed in ~/.local.
 
+Alternatively, from a server install of any distro, install wayland and gnome. Load config with 
+```cat gnome-settings.ini | dconf load / ```
+
 ## Install server distro of choice
 
 ## Install packages
