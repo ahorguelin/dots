@@ -9,7 +9,7 @@
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
-set scrolloff=5
+set scrolloff=8
 
 " Do incremental searching.
 set incsearch
@@ -18,13 +18,15 @@ set incsearch
 map Q gq
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+" --- NB: if using as .vimrc config, do not use the plugins before sourcing
 
 " Highlight copied text
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
-
-
+" NERDTree
+Plug 'preservim/nerdtree'
+set NERDTree
 """""""""""""""""""""""	PERSONAL CONFIG """""""""""""""""""""""
 
 let mapleader = " "
@@ -33,6 +35,8 @@ set syntax
 set nocompatible
 set number relativenumber
 set showmode
+
+xnoremap <leader>p "_dP
 
 map <leader>v <C-w>v
 map <leader>h <C-w>h
