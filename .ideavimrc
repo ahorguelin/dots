@@ -9,7 +9,7 @@
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
-set scrolloff=8
+set scrolloff=5
 
 " Do incremental searching.
 set incsearch
@@ -18,7 +18,6 @@ set incsearch
 map Q gq
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-" --- NB: if using as .vimrc config, do not use the plugins before sourcing
 
 " Highlight copied text
 Plug 'machakann/vim-highlightedyank'
@@ -26,24 +25,62 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
 " NERDTree
 Plug 'preservim/nerdtree'
-set NERDTree
+
 """""""""""""""""""""""	PERSONAL CONFIG """""""""""""""""""""""
+set NERDTree
 
 let mapleader = " "
 
 set syntax 
 set nocompatible
+set ignorecase
+set smartcase
 set number relativenumber
 set showmode
 
-xnoremap <leader>p "_dP
-
 map <leader>v <C-w>v
-map <leader>h <C-w>h
-map <leader>l <C-w>l
+map <C-h> <C-w>h
+map <C-l> <C-w>l
 
-map <leader>[ gT
-map <leader>] gt
+noremap <leader>P "+p
+noremap <leader>Y "+y
+
+map <C-[> gT
+map <C-]> gt
 
 map <C-d> <C-d>zz
 map <C-u> <C-u>zz
+
+map } }zz
+map { {zz
+
+
+"""""""""""""""""""""""	Intellij actions """""""""""""""""""""""
+" navigation
+map <leader>c <Action>(GotoClass)
+
+" tools
+map <leader>e <Action>(HideAllWindows)
+map <leader>t <Action>(ActivateTerminalToolWindow)
+
+" intellisense & shit
+map <leader>gi <Action>(FindUsages)
+map <leader>qd <Action>(QuickImplementations)
+map <leader>p <Action>(ParameterInfo)
+
+" popups
+map <leader>r <Action>(Refactorings.QuickListPopupAction)
+map <leader>m <Action>(Generate)
+
+" Bookmarks
+
+map <leader>1 <Action>(ToggleBookmark1)
+map <leader>2 <Action>(ToggleBookmark2)
+map <leader>3 <Action>(ToggleBookmark3)
+map <leader>4 <Action>(ToggleBookmark4)
+map <leader>5 <Action>(ToggleBookmark5)
+map <leader>6 <Action>(ToggleBookmark6)
+map <leader>7 <Action>(ToggleBookmark7)
+
+map <leader>bl <Action>(ShowBookmarks)
+map <leader>bt <Action>(ToggleBookmark)
