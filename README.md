@@ -15,13 +15,13 @@ Which should be put in home directory.
 From the home directory
 Dumping your config:
 ```bash
-$ dconf dump / > gnome_settings.dconf
+dconf dump / > gnome_settings.dconf
 ```
 
 Get the gnome_settings.ini file in your home folder.
 Loading a config:
 ```bash
-$ dconf load -f / < saved_settings.dconf
+dconf load -f / < gnome_settings.dconf
 ```
 
 ### Manual config
@@ -37,7 +37,11 @@ $ gsettings set org.gnome.desktop.wm.preferences num-workspaces 8
 Other settings are mostly kept default. <Super> is always used for window management and resizing, and custom shortcuts are sprinkled here and there when needed
 
 ## Tmux setup
-clone the following repo: https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+Run the following command (curtesy of : https://github.com/tmux-plugins/tpm)
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
 to run tmux and get the extensions running. To install extensions in Tmux: <leader>I and reload the config with <leader>r
   
 ## Setup VS Code
