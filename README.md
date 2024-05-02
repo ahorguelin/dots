@@ -15,20 +15,20 @@ Which should be put in home directory.
 From the home directory
 Dumping your config:
 ```bash
-    $ dconf dump / > gnome_settings.dconf
+$ dconf dump / > gnome_settings.dconf
 ```
 
 Get the gnome_settings.ini file in your home folder.
 Loading a config:
 ```bash
-    $ dconf load -f / < saved_settings.dconf
+$ dconf load -f / < saved_settings.dconf
 ```
 
 ### Manual config
 - Install GnomeTweaks and Dconf editor
 - Getting 8 workspaces:
 ```bash
-    gsettings set org.gnome.desktop.wm.preferences num-workspaces 8
+$ gsettings set org.gnome.desktop.wm.preferences num-workspaces 8
 ```
 - Removing ['<Super>n'] (n = app number in dock) to launch a specific app to bind it to switching a worskapce
  - Dconf editor: org/gnome/shell/keybindings/switch-to-application-n => remove them all
