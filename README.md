@@ -30,12 +30,12 @@ $ dconf load -f / < saved_settings.dconf
 ```bash
 $ gsettings set org.gnome.desktop.wm.preferences num-workspaces 8
 ```
-- Removing ['<Super>n'] (n = app number in dock) to launch a specific app to bind it to switching a worskapce
- - Dconf editor: org/gnome/shell/keybindings/switch-to-application-n => remove them all
+- Removing ['<Super>n'] (n = app number in dock) to launch a specific app to bind it to switching a worskapce:
+** -> Dconf editor: org/gnome/shell/keybindings/switch-to-application-n => remove them all**
 - Setting ['<Super>n'] (n = workspace number) to switch to a specific workspace
- - Dconf editor: org/gnome/desktop/wm/keybindings/switch-to-workspace-n => set to ['<Super>n']
+** -> Dconf editor: org/gnome/desktop/wm/keybindings/switch-to-workspace-n => set to ['<Super>n']**
 - Setting ['<Shift><Super>n'] (n = workspace number) to move an app to a specific workspace
- - Dconf editor: org/gnome/desktop/wm/keybindings/move-to-workspace-n => set to ['<Shift><Super>n']
+** -> Dconf editor: org/gnome/desktop/wm/keybindings/move-to-workspace-n => set to ['<Shift><Super>n']**
 
 Other settings are mostly kept default. <Super> is always used for window management and resizing, and custom shortcuts are sprinkled here and there when needed
 
