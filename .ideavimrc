@@ -45,6 +45,8 @@ map <C-l> <C-w>l
 noremap <leader>P "+p
 noremap <leader>Y "+y
 
+map esc :nohlsearch
+
 map <C-[> gT
 map <C-]> gt
 
@@ -57,7 +59,8 @@ map { {zz
 
 """""""""""""""""""""""	Intellij actions """""""""""""""""""""""
 " navigation
-map <leader>c <Action>(GotoClass)
+nmap C <Action>(GotoClass)
+nmap <C-p> <Action>(GotoFile)
 
 " tools
 map <leader>e <Action>(HideAllWindows)
@@ -72,9 +75,9 @@ map <leader>p <Action>(ParameterInfo)
 map <leader>r <Action>(Refactorings.QuickListPopupAction)
 map <leader>m <Action>(Generate)
 
-" Harpoon
-map <leader>A <Action>(HarpoonerAddFile)
-map <leader>H <Action>(HarpoonerQuickMenu)
+" Bookmarks
+map <leader>a <Action>(HarpoonerAddFile)
+map <leader>h <Action>(HarpoonerQuickMenu)
 map <leader>1 <Action>(HarpoonerOpenFile0)
 map <leader>2 <Action>(HarpoonerOpenFile1)
 map <leader>3 <Action>(HarpoonerOpenFile2)
