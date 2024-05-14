@@ -9,7 +9,7 @@
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
-set scrolloff=5
+set scrolloff=8
 
 " Do incremental searching.
 set incsearch
@@ -56,15 +56,12 @@ map <C-u> <C-u>zz
 map } }zz
 map { {zz
 
+map <leader>si :source ~/.ideavimrc<CR>
 
 """""""""""""""""""""""	Intellij actions """""""""""""""""""""""
 " navigation
 nmap C <Action>(GotoClass)
 nmap <C-p> <Action>(GotoFile)
-
-" tools
-map <leader>e <Action>(HideAllWindows)
-map <leader>t <Action>(ActivateTerminalToolWindow)
 
 " intellisense & shit
 map <leader>gi <Action>(FindUsages)
