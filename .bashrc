@@ -26,6 +26,8 @@ fi
 #aliases
 alias cdn="cd ~/Documents/notes"
 alias vim="nvim"
+alias ll="eza -Ahl"
+alias ls="eza -hl"
 
 #functions
 mkcd ()
@@ -41,6 +43,11 @@ fcd ()
 fim ()
 {
     vim $(find . -type f | fzf)
+}
+
+ifzf ()
+{
+    kitten icat $(find . -type f | fzf)
 }
 
 #go path
