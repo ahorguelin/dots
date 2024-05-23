@@ -1,4 +1,4 @@
-set scrolloff=5
+set scrolloff=8
 
 " Do incremental searching.
 set incsearch
@@ -15,9 +15,11 @@ set nocompatible
 set number relativenumber
 set showmode
 
+map <leader>E :Ex<CR>
 map <leader>v <C-w>v
-map <leader>h <C-w>h
-map <leader>l <C-w>l
+map <leader>H :nohlsearch<CR>
+map <C-h> <C-w>h
+map <C-l> <C-w>l
 
 map <leader>[ gT
 map <leader>] gt
