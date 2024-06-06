@@ -187,21 +187,7 @@ bindsym $mod+r mode "resize"
 #
 # Status Bar:
 #
-
-bar {
-    position bottom
-    status_command swaybar
-    #status_command i3blocks -c ~/dots/stow/.config/i3blocks/config
-
-    colors {
-        background $base
-        statusline $rosewater
-        focused_workspace $rosewater $lavender $base
-        inactive_workspace $rosewater $base $rosewater
-        inactive_workspace $base $base $text
-        urgent_workspace $base $red $text
-    }
-}
+exec waybar
 
 
 ### COSMETICS
@@ -221,3 +207,17 @@ exec swaymsg "workspace 2; exec firefox"
 
 include /etc/sway/config.d/*
 
+# If waybar unavailable
+# bar {
+#     position bottom
+#     status_command i3blocks 
+# 
+#     colors {
+#         background $base
+#         statusline $rosewater
+#         focused_workspace $rosewater $lavender $base
+#         inactive_workspace $rosewater $base $rosewater
+#         inactive_workspace $base $base $text
+#         urgent_workspace $base $red $text
+#     }
+# }
