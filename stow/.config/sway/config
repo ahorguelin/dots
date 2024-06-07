@@ -6,6 +6,7 @@
 # Mod1 = alt; Mod4 = windows
 set $mod Mod4 
 
+#Set compose key 
 set $left h
 set $down j
 set $up k
@@ -60,7 +61,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Keyboard remaps
 #
 input "type:keyboard" {
-    xkb_options caps:escape
+    xkb_options caps:escape,compose:ralt
 }
 #
 # Mouse misc
@@ -74,6 +75,15 @@ input $mouse {
 }
 focus_follows_mouse no
 
+#
+# trackpad misc
+# 
+#input $trackpad {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll disabled
+#       middle_emulation enabled
+#}
 
 ### KEY BINDINGS
 
@@ -84,6 +94,7 @@ focus_follows_mouse no
     bindsym $mod+Return exec $term
     bindsym $mod+d exec $menu --show drun | xargs swaymsg exec --
     bindsym $mod+Shift+w exec ~/.config/wofi/scripts/wifimenu.sh
+    bindsym $mod+Shift+s exec flameshot gui
     bindsym $mod+c exec ~/.config/wofi/scripts/calculator.sh
     bindsym $mod+escape exec ~/.config/wofi/scripts/powermenu.sh
 
