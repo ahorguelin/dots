@@ -14,6 +14,7 @@ set $right l
 
 set $term alacritty 
 set $mouse 1133:16500:Logitech_G305
+set $trackpad  1118:2496:Microsoft_Surface_Type_Cover_Touchpad
 #
 # Colors
 #
@@ -73,17 +74,17 @@ input $mouse {
     accel_profile "flat"
     pointer_accel 0.0 
 }
-focus_follows_mouse no
 
 #
 # trackpad misc
-# 
-#input $trackpad {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll disabled
-#       middle_emulation enabled
-#}
+ 
+input $trackpad {
+       dwt enabled
+       natural_scroll enabled
+       middle_emulation disabled
+}
+
+focus_follows_mouse no
 
 ### KEY BINDINGS
 
@@ -94,7 +95,6 @@ focus_follows_mouse no
     bindsym $mod+Return exec $term
     bindsym $mod+d exec $menu --show drun | xargs swaymsg exec --
     bindsym $mod+Shift+w exec ~/.config/wofi/scripts/wifimenu.sh
-    bindsym $mod+Shift+s exec flameshot gui
     bindsym $mod+c exec ~/.config/wofi/scripts/calculator.sh
     bindsym $mod+escape exec ~/.config/wofi/scripts/powermenu.sh
 
