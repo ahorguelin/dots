@@ -94,6 +94,14 @@ focus_follows_mouse no
     # Exec applications
     bindsym $mod+Return exec $term
     bindsym $mod+d exec $menu --show drun | xargs swaymsg exec --
+
+    # Screenshots
+    # capture the specified screen area to clipboard    
+    bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy    
+    # capture the focused monitor to clipboard    
+    bindsym  $mod+Shift+p exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
+    
+    # Wofi misc
     bindsym $mod+Shift+w exec ~/.config/wofi/scripts/wifimenu.sh
     bindsym $mod+c exec ~/.config/wofi/scripts/calculator.sh
     bindsym $mod+escape exec ~/.config/wofi/scripts/powermenu.sh
