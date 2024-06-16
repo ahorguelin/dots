@@ -51,7 +51,7 @@ ifzf ()
 }
 
 #go path
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:/home/aho/.cargo/bin
 
 #use starship
 eval "$(starship init bash)"
