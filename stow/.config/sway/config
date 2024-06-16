@@ -12,7 +12,7 @@ set $down j
 set $up k
 set $right l
 
-set $term alacritty 
+set $term kitty 
 set $mouse 1133:16500:Logitech_G305
 set $trackpad  1118:2496:Microsoft_Surface_Type_Cover_Touchpad
 #
