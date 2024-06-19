@@ -24,7 +24,8 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 #aliases
-alias cdn="cd ~/Documents/notes"
+alias wcd="cd /mnt/c/Users/ahorguel/"
+alias nvim="~/./nvim-linux64/bin/nvim"
 alias vim="~/./nvim-linux64/bin/nvim"
 alias v="~/./nvim-linux64/bin/nvim"
 alias ll="eza -Ahl"
@@ -46,10 +47,6 @@ fim ()
     vim $(find . -type f | fzf)
 }
 
-ifzf ()
-{
-    kitten icat $(find . -type f | fzf)
-}
 
 #go path
 export PATH=$PATH:/usr/local/go/bin:/home/aho/.cargo/bin
@@ -58,7 +55,10 @@ export PATH=$PATH:/usr/local/go/bin:/home/aho/.cargo/bin
 eval "$(starship init bash)"
 
 unset rc
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
