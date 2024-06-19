@@ -25,7 +25,8 @@ fi
 
 #aliases
 alias cdn="cd ~/Documents/notes"
-alias vim="nvim"
+alias vim="~/./nvim-linux64/bin/nvim"
+alias v="~/./nvim-linux64/bin/nvim"
 alias ll="eza -Ahl"
 alias ls="eza -hl"
 
