@@ -28,15 +28,12 @@ Plug 'preservim/nerdtree'
 
 """""""""""""""""""""""	PERSONAL CONFIG """""""""""""""""""""""
 set NERDTree
-
 let mapleader = " "
-
 set syntax
 set nocompatible
 set ignorecase
 set smartcase
 set number relativenumber
-set showmode
 
 map <leader>v <C-w>v
 map <C-h> <C-w>h
@@ -44,8 +41,6 @@ map <C-l> <C-w>l
 
 noremap <leader>P "+p
 noremap <leader>Y "+y
-
-map esc :nohlsearch
 
 map <C-[> gT
 map <C-]> gt
@@ -56,16 +51,20 @@ map <C-u> <C-u>zz
 map } }zz
 map { {zz
 
-map <leader>si :source ~/.ideavimrc<CR>
-
+cnoremap <C-v> <C-r>"
+vnoremap <C-j> :m '>+1<CR>gv=gv"
+vnoremap <C-k> :m '<-2<CR>gv=gv"
 """""""""""""""""""""""	Intellij actions """""""""""""""""""""""
 " navigation
 nmap C <Action>(GotoClass)
 nmap <C-p> <Action>(GotoFile)
+map <leader>si :source ~/.ideavimrc<CR>
 
 " intellisense & shit
 map <leader>gi <Action>(FindUsages)
 map <leader>qd <Action>(QuickImplementations)
+nmap <leader>gr <Action>(FindInPath)
+vmap <leader>gr <Action>(FindSelectionInPath)
 map <leader>p <Action>(ParameterInfo)
 
 " popups
@@ -80,6 +79,3 @@ map <leader>2 <Action>(HarpoonerOpenFile1)
 map <leader>3 <Action>(HarpoonerOpenFile2)
 map <leader>4 <Action>(HarpoonerOpenFile3)
 map <leader>5 <Action>(HarpoonerOpenFile4)
-map <leader>6 <Action>(HarpoonerOpenFile5)
-map <leader>7 <Action>(HarpoonerOpenFile6)
-map <leader>8 <Action>(HarpoonerOpenFile7)
