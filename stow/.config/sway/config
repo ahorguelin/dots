@@ -94,6 +94,7 @@ focus_follows_mouse no
     # Exec applications
     bindsym $mod+Return exec $term
     bindsym $mod+d exec $menu --show drun | xargs swaymsg exec --
+    bindsym $mod+e exec nautilus
 
     # Screenshots
     # capture the specified screen area to clipboard    
