@@ -25,9 +25,9 @@ fi
 
 #aliases
 alias cdn="cd ~/Documents/notes"
-alias vim="nvim"
 alias ll="eza -Ahl"
 alias ls="eza -hl"
+alias nvim="~/appimages/nvim.appimage"
 
 #functions
 mkcd ()
@@ -50,10 +50,14 @@ ifzf ()
     kitten icat $(find . -type f | fzf)
 }
 
-#go path
-export PATH=$PATH:/usr/local/go/bin:/home/aho/.cargo/bin
+# fod-fin proxy
+export http_proxy=http://proxies.finbel.intra:8080
+export https_proxy=http://proxies.finbel.intra:8080
+export no_proxy='localhost,127.0.0.0/8,.finbel.intra,.svc,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,172.26.0.0/16'
+export HTTP_PROXY=http://proxies.finbel.intra:8080
+export HTTPS_PROXY=http://proxies.finbel.intra:8080
+export NO_PROXY='localhost,127.0.0.0/8,.finbel.intra,.svc,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,172.26.0.0/16'
 
-#use starship
 eval "$(starship init bash)"
 
 unset rc
