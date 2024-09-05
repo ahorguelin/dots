@@ -1,12 +1,6 @@
 # dots
 Dotfiles for simple Linux Distro using Gnome, tmux and nvim. Vim VS Code jsons also available. The goal is to start from a fresh linux install and have a somewhat painless experience for a destkop. Configuration is VERY minimalist and uses Gnome default as well as keybinding to achieve a somewhat WM-eske experience. 
 
-Almost all files / dirs can be dumped in ~/.config. Exception must be made for:
-- .bashrc
-- .tmux.conf
-- .tmux
-Which should be put in home directory.
-
 # Linux Setup
 ## Gnome
 **For some skill-issue reasons, I'm never able to dump and load my gnome config, so I document the little I change here. gnome_settings.ini is there if you want to try your luck**
