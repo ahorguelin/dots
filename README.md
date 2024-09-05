@@ -63,8 +63,15 @@ Hack Nerd
 
 ## Intellij setup
 Settings are synched accross device but just in case:
-- Install IdeaVim 
+- Install IdeaVim
 - Install Pokeprogress (impossible to code without it)
 - Install Atmon one dark theme and materia icons
 - Install Harpooner
 
+## Anything else that has a <program>/.config/<program> path
+- Install Stow
+- run
+```bash
+  stow <program>  
+```
+- profit
