@@ -1,23 +1,10 @@
-"""""""""""""""""""""""	DEFAULT CONFIG """"""""""""""""""""""""
-
-" .ideavimrc is a configuration file for IdeaVim plugin. It uses
-"   the same commands as the original .vimrc configuration.
-" You can find a list of commands here: https://jb.gg/h38q75
-" Find more examples here: https://jb.gg/share-ideavimrc
-
-
-"" -- Suggested options --
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
 set scrolloff=8
 
-" Do incremental searching.
 set incsearch
 
-" Don't use Ex mode, use Q for formatting.
 map Q gq
 
-" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+"""""""""""""""""""""""	PLUGINS """""""""""""""""""""""
 
 " Highlight copied text
 Plug 'machakann/vim-highlightedyank'
@@ -38,9 +25,10 @@ set number relativenumber
 map <leader>v <C-w>v
 map <C-h> <C-w>h
 map <C-l> <C-w>l
+" Zoom on a split editor
+map <leader>z <Action>(MaximizeEditorInSplit)
 
-noremap <leader>P "+p
-noremap <leader>Y "+y
+set clipboard^=unnamed,unnamedplus
 
 map <C-[> gT
 map <C-]> gt
@@ -50,26 +38,37 @@ map <C-u> <C-u>zz
 
 map } }zz
 map { {zz
-
 cnoremap <C-v> <C-r>"
-vnoremap <C-j> :m '>+1<CR>gv=gv"
-vnoremap <C-k> :m '<-2<CR>gv=gv"
+
 """""""""""""""""""""""	Intellij actions """""""""""""""""""""""
 " navigation
-nmap C <Action>(GotoClass)
 nmap <C-p> <Action>(GotoFile)
+nmap <C-j> <Action>(GotoClass)
+nmap <leader>q <Action>(CloseAllEditorsButActive)
+nmap <leader>Q <Action>(CloseAllEditors)
+nmap <esc> <Action>(HideAllWindows)
+" ideavimrc
 map <leader>si :source ~/.ideavimrc<CR>
+
+" linters
+vnoremap /= ReformatCode
 
 " intellisense & shit
 map <leader>gi <Action>(FindUsages)
-map <leader>qd <Action>(QuickImplementations)
+map <leader>gd <Action>(QuickImplementations)
 nmap <leader>gr <Action>(FindInPath)
 vmap <leader>gr <Action>(FindSelectionInPath)
 map <leader>p <Action>(ParameterInfo)
+map <leader>ge <Action>(ShowErrorDescription)
+
+" debugging
+map <leader>B <Action>(Debugger.RemoveAllBreakpoints)
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>mb <Action>(ToggleMethodBreakpoint)
 
 " popups
-map <leader>r <Action>(Refactorings.QuickListPopupAction)
-map <leader>m <Action>(Generate)
+map <leader>cr <Action>(Refactorings.QuickListPopupAction)
+map <leader>cg <Action>(Generate)
 
 " Bookmarks
 map <leader>a <Action>(HarpoonerAddFile)
