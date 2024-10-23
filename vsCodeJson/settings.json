@@ -1,70 +1,155 @@
 {
-	//THEME
-	"workbench.colorTheme": "One Dark Pro Flat",
-	"workbench.iconTheme": "material-icon-theme",
-	"terminal.integrated.fontFamily": "'Hack Nerd Font Mono'",
-	"editor.fontFamily": "'Hack Nerd Font'",
-	"editor.fontSize": 15,
-	"editor.lineNumbers": "relative",
-	"window.menuBarVisibility": "toggle",
-
-	//SECURITY
-	"security.workspace.trust.untrustedFiles": "open",
-	"explorer.confirmDelete": false,
-
-	//VIIIIIIIIIIIIIIIIM
-	"vim.leader": "<Space>",
-	"vim.hlsearch": true,
-	"vim.normalModeKeyBindingsNonRecursive": [
-		// switch b/w buffers
-		{ "before": ["leader", "["], "commands": [":bprevious"] },
-		{ "before": ["leader", "]"], "commands": [":bnext"] },
-
-		//Navigation
-		//splits
-		{ "before": ["leader", "v"], "commands": [":vsplit"] },
-
-		//panes
-		{
-			"before": ["leader", "h"],
-			"commands": ["workbench.action.focusLeftGroup"]
-		},
-
-		{
-			"before": ["leader", "l"],
-			"commands": ["workbench.action.focusRightGroup"]
-		},
-		//pageDown pageUp
-		{
-			"before": ["<C-d>"],
-			"after": ["<C-d>", "z", "z"]
-		},
-
-		{
-			"before": ["<C-u>"],
-			"after": ["<C-u>", "z", "z"]
-		},
-
-		//get definition
-		{
-			"before": ["leader", "d"],
-			"commands": ["editor.action.showDefinitionPreviewHover"]
-		}
-	],
-
-	//CODE FORMATING
-	"editor.formatOnSave": true,
-	"prettier.tabWidth": 4,
-	"prettier.useTabs": true,
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[jsonc]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"editor.minimap.enabled": false,
-	"[typescriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"accessibility.dimUnfocused.opacity": 1,
+    "window.menuBarVisibility": "toggle",
+    "editor.stickyScroll.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    //THEME
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "workbench.iconTheme": "catppuccin-macchiato",
+    "terminal.integrated.fontFamily": "'Hack Nerd Font Mono'",
+    "editor.fontFamily": "'Hack Nerd Font'",
+    "editor.fontSize": 15,
+    //SECURITY
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmDelete": false,
+    //VIIIIIIIIIIIIIIIIM
+    "vim.leader": "<Space>",
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // switch b/w buffers
+        {
+            "before": [
+                "<C-[>",
+            ],
+            "commands": [
+                ":bprevious"
+            ]
+        },
+        {
+            "before": [
+                "<C-]>",
+            ],
+            "commands": [
+                ":bnext"
+            ]
+        },
+        //Navigation
+        //splits
+        {
+            "before": [
+                "leader",
+                "v"
+            ],
+            "commands": [
+                ":vsplit"
+            ]
+        },
+        //panes
+        {
+            "before": [
+                "<C-l>",
+            ],
+            "commands": [
+                "workbench.action.focusLeftGroup"
+            ]
+        },
+        {
+            "before": [
+                "<C-h>",
+            ],
+            "commands": [
+                "workbench.action.focusRightGroup"
+            ]
+        },
+        //pageDown pageUp
+        {
+            "before": [
+                "<C-d>"
+            ],
+            "after": [
+                "<C-d>",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "<C-u>"
+            ],
+            "after": [
+                "<C-u>",
+                "z",
+                "z"
+            ]
+        },
+        //get definition
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.showDefinitionPreviewHover"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        // Stay in visual mode while indenting
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        // Move selected lines while staying in visual mode
+        {
+            "before": [
+                "J"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ]
+        },
+        // toggle comment selection
+        {
+            "before": [
+                "leader",
+                "c"
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
+        }
+    ],
+    //CODE FORMATING
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }
