@@ -1,10 +1,22 @@
+
+
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
 set scrolloff=8
 
+" Do incremental searching.
 set incsearch
-
+" Don't use Ex mode, use Q for formatting.
 map Q gq
 
-"""""""""""""""""""""""	PLUGINS """""""""""""""""""""""
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
 " Highlight copied text
 Plug 'machakann/vim-highlightedyank'
@@ -22,14 +34,10 @@ set ignorecase
 set smartcase
 set number relativenumber
 
+" Screens, tabs and tab navigation
 map <leader>v <C-w>v
 map <C-h> <C-w>h
 map <C-l> <C-w>l
-" Zoom on a split editor
-map <leader>z <Action>(MaximizeEditorInSplit)
-
-set clipboard^=unnamed,unnamedplus
-
 map <C-[> gT
 map <C-]> gt
 
@@ -38,6 +46,12 @@ map <C-u> <C-u>zz
 
 map } }zz
 map { {zz
+map <C-s> <Action>(MoveEditorToOppositeTabGroup)
+map <leader>z <Action>(MaximizeEditorInSplit)
+
+
+" copy paste / search for yanked
+set clipboard^=unnamed,unnamedplus
 cnoremap <C-v> <C-r>"
 
 """""""""""""""""""""""	Intellij actions """""""""""""""""""""""
@@ -55,11 +69,13 @@ vnoremap /= ReformatCode
 
 " intellisense & shit
 map <leader>gi <Action>(FindUsages)
+nmap U <Action>(ShowUsages)
+nmap gi <Action>(GotoImplementation)
+nmap ge <Action>(ShowErrorDescription)
 map <leader>gd <Action>(QuickImplementations)
 nmap <leader>gr <Action>(FindInPath)
 vmap <leader>gr <Action>(FindSelectionInPath)
 map <leader>p <Action>(ParameterInfo)
-map <leader>ge <Action>(ShowErrorDescription)
 
 " debugging
 map <leader>B <Action>(Debugger.RemoveAllBreakpoints)
