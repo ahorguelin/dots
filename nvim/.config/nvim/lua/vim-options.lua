@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
@@ -25,6 +24,7 @@ vim.cmd("set spelllang=fr")
 
 vim.keymap.set("n", "<C-e>", vim.cmd.Ex)
 vim.keymap.set("n", "<C-q>", ":q<CR>")
+vim.keymap.set("n", "s", "<Nop>")
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
@@ -33,7 +33,6 @@ vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("n", "<leader>v", "<C-w>v")
-vim.keymap.set("n", "<leader>s", "<C-w>s")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")

@@ -23,6 +23,9 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 
+#nvim local insal
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
 #aliases
 alias cdn="cd ~/Documents/notes"
 alias vim="nvim"
