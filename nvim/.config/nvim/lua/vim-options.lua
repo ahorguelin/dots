@@ -46,3 +46,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	vim.highlight.on_yank()
 	end,
 })
+
+-- vim.keymap.set("n", "<leader>tp", 
+--     function()
+--         vim.cmd("set spelllang=fr")
+--         vim.cmd("set spell")
+--         vim.cmd("set linebreak")
+--         vim.keymap.set({"n", "v"}, "j", "gj")
+--         vim.keymap.set({"n", "v"}, "k", "gk")
+--     end
+-- )
