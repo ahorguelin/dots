@@ -66,3 +66,5 @@ vim.keymap.set("n", "<leader>tp",
         end
     end
 )
+
+vim.keymap.set("v", "<leader>ft", ":! tr -s ' ' | column -t -s '|' -o '|'")
