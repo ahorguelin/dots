@@ -47,12 +47,22 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
--- vim.keymap.set("n", "<leader>tp", 
---     function()
---         vim.cmd("set spelllang=fr")
---         vim.cmd("set spell")
---         vim.cmd("set linebreak")
---         vim.keymap.set({"n", "v"}, "j", "gj")
---         vim.keymap.set({"n", "v"}, "k", "gk")
---     end
--- )
+local isWriteMode = false
+vim.keymap.set("n", "<leader>tp",
+    function()
+        if (not isWriteMode) then
+            vim.cmd("set spelllang=fr")
+            vim.cmd("set spell")
+            vim.cmd("set linebreak")
+            vim.keymap.set("n", "j", "gj")
+            vim.keymap.set("n", "k", "gk")
+            isWriteMode = true
+            else
+            vim.cmd("set spell!")
+            vim.cmd("set linebreak!")
+            vim.keymap.set("n", "j", "j")
+            vim.keymap.set("n", "k", "k")
+            isWriteMode = false
+        end
+    end
+)

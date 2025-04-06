@@ -115,6 +115,7 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#resize
     alt-y = 'resize smart -50'
     alt-o = 'resize smart +50'
+    alt-f = 'fullscreen'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
     alt-1 = 'workspace 1'
